@@ -1,0 +1,24 @@
+{
+"nodes": [
+    {
+        "name": "index",
+        "children": [
+            {
+                "name": "Contact",
+            },
+            {
+                "name": "Projects",
+            },
+            {
+                "name": "CV",
+            },
+    },
+
+
+"links": [
+    {
+        source: "Child 1",
+        target: "Child 2"
+    },
+
+}
