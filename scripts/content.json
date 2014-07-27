@@ -23,13 +23,13 @@
 
 }
 */
-var graph = {
+{
     "nodes" : [
         {"name" : "one", "group" : 1},
-        {"name" : "two", "group" : 2}
+        {"name" : "two", "group" : 1}
     ],
 
     "links" : [
        {"source" : 0, "target" : 1, "value" : 1}
    ]
-}
+};
