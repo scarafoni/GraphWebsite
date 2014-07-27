@@ -2,34 +2,60 @@
 "nodes": [
     {
         "name": "index",
+        "group" : 1,
         "children": [
             {
                 "name": "Contact",
+                "group" : 1,
+                "children" : []
             },
             {
                 "name": "Projects",
+                "group" : 1,
+                "children" : []
             },
             {
                 "name": "CV",
-            },
+                "group" : 1,
+                "children" : []
+            }
+        ]
     },
-
-
-"links": [
-    {
-        source: "Child 1",
-        target: "Child 2"
-    },
-
 }
 */
-{
-    "nodes" : [
-        {"name" : "one", "group" : 1},
-        {"name" : "two", "group" : 1}
-    ],
-
-    "links" : [
-       {"source" : 0, "target" : 1, "value" : 1}
-   ]
+ {
+    "nodes":
+        {
+        name:'RootNode',
+        children:[
+        {
+            "switch_id": 1,
+            "name": "switch1",
+            "children": [
+                {
+                    "name": "port-1"
+                },
+                {
+                    "name": "port-2"
+                }
+            ]
+        },
+        {
+            "switch_id": 2,
+            "name": "switch2"
+        },
+        {
+            "switch_id": 3,
+            "name": "switch3"
+        }
+        ]
+        }
+    ,
+    "links":[
+       {
+          "source": 1,
+          "target": 2,
+          "value": 5
+       }
+     ]
 };
