@@ -5,40 +5,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection, tv" />
 <script src="scripts/lib/jquery-1.11.1.min.js"></script>
+<script src="scripts/lib/d3.min.js"></script>
+<script src="scripts/content.json"</script>
+<script src="scripts/graph.js"</script>
 <script>
 	$(function(){
 		$("#includeTitle").load("include/title.html");
-		$("#includeColumnLeft").load("include/columnLeft.html");
 	});
 </script>
+
 </head>
 <body>
 	<div id="wrapper">
 		<div id="includeTitle"></div>
 		<hr class="noscreen" />
-		<div class="content">
-			<div id="includeColumnLeft"></div>
-			<div id="skip-menu"></div>
-			<div class="column-right">
-				<div class="box">
-				<div class="box-top"></div>
-					<div class="box-in">
-						<h2>Welcome to the personal website of Dan Scarafoni!</h2>
-						<p>
-						  I'm currently in the last year of a 4+1 program at University of Rochester. I have graduated
-						  with a B.S. in computer science cum laude, highest distinction, with highest honors research, 
-						  several undergraduate research
-						  projects, and a love for everything computer. I hope to finish my M.S. this year Please click 
-						  on the adjacent links to find out more about me and what I do.
-						</p>
-					</div>
-				</div>
-				<div class="box-bottom">
-					<hr class="noscreen" />
-				</div>
-			</div>
-			<div class="cleaner">&nbsp;</div>
-		</div>
+		<div class="content"></div>
 	</div>
 </body>
 </html>
