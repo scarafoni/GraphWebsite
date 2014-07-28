@@ -26,14 +26,17 @@
                     {
                         "switch_id": 1,
                         "name": "projects",
+                        "text" : "projects"
                     },
                     {
                         "switch_id": 1,
-                        "name": "contact"
+                        "name": "contact",
+                        "text": "contact",
                     },
                     {
                         "switch_id": 1,
-                        "name": "CV"
+                        "name": "CV",
+                        "text": "CV"
                     },
                 ]
             }

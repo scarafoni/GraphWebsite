@@ -78,12 +78,18 @@ function update() {
 
   // Restart the force layout.
   force
-      .nodes(nodes)
+      .nodes(d3.values(nodes))
       .links(links)
       .linkDistance(400)
       .charge(-10000)
       .on('tick',tick)
       .start();
+
+    var node = svg.selectAll(".node").data(json.nodes).enter().append("g")
+        .attr("class", "node")
+        .attr("transform", function (d) {
+            return "translate(" + d.x + "," + d.y + ")";
+        }).call(force.drag);
 
   // Update the links…
   link = link.data(links, function(d) { return d.target.id; });
@@ -106,14 +112,19 @@ function update() {
   node.exit().remove();
 
   // Enter any new nodes.
-  node.enter().append("circle")
-      .attr("class", "node")
+  node.append("circle")
       .attr("cx", function(d) { return d.x; })
       .attr("cy", function(d) { return d.y; })
       .attr("r", function(d) { return Math.sqrt(d.size) / 10 || 100; })
       .style("fill", color)
       .on("click", click)
       .call(force.drag);
+
+    node.append("text")
+        .style("text-anchor", "middle")
+        .text(function (d) {
+        return d.name;
+    });
 }
 
 function tick() {
