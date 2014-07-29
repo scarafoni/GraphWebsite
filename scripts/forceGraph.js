@@ -30,12 +30,10 @@ d3.json("scripts/content.json", function(error, json) {
       .attr("class", "node")
       .call(force.drag);
 
-  node.append("image")
-      .attr("xlink:href", "https://github.com/favicon.ico")
+  node.append("circle")
       .attr("x", -8)
       .attr("y", -8)
-      .attr("width", 16)
-      .attr("height", 16);
+      .attr("r", 16);
 
   node.append("text")
       .attr("dx", 12)
