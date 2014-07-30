@@ -9,7 +9,7 @@ var svg = d3.select("body").append("svg")
 var force = d3.layout.force()
     .gravity(.05)
     .distance(100)
-    .charge(-100)
+    .charge(-15000)
     .size([width, height]);
 
 d3.json("scripts/content.json", function(error, json) {
@@ -17,6 +17,7 @@ d3.json("scripts/content.json", function(error, json) {
   force
       .nodes(json.nodes)
       .links(json.links)
+      .linkDistance(400)
       .start();
 
   var link = svg.selectAll(".link")
@@ -33,7 +34,8 @@ d3.json("scripts/content.json", function(error, json) {
   node.append("circle")
       .attr("x", -8)
       .attr("y", -8)
-      .attr("r", 16);
+      .attr("fill","blue")
+      .attr("r", 100);
 
   node.append("text")
       .attr("dx", 12)

@@ -242,5 +242,8 @@ padding-left: 27px;
   stroke-opacity: .6;
 }
 
-
+.node circle
+{
+    fill: "blue";
+}
 
