@@ -1,5 +1,5 @@
-var width = 960,
-    height = 500
+var width = $(window).width();
+    height = $(window).height();
 
 function loadInfo() {
 var svg = d3.select("body").append("svg")
